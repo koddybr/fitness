@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Activdad;
+use App\Activdad;
 class ActividadController extends Controller
 {
     /**
@@ -13,6 +13,7 @@ class ActividadController extends Controller
      */
     public function index()
     {
+        return 234234;
         $actividades = Actividad::get();
         $data = [
             'actividades' => $actividades
@@ -28,15 +29,14 @@ class ActividadController extends Controller
      */
     public function create()
     {
-        $actividad = new Actividad();
-        $data = [
-            'actividad' => $actividad
-        ];
-        return $actividad;
+        // $actividad = new Actividad();
+        // $data = [
+        //     'actividad' => $actividad
+        // ];
+        return view('actividades.index');
     }
-
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource i                                                                                                  \n storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -66,7 +66,7 @@ class ActividadController extends Controller
         $data = [
             'actividad' => $actividad
         ];
-        return $actividad;
+        return view('actividades.create');;
     }
 
     /**
