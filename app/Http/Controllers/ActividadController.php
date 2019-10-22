@@ -33,7 +33,7 @@ class ActividadController extends Controller
         // $data = [
         //     'actividad' => $actividad
         // ];
-        return view('actividades.index');
+        return view('actividades.create');
     }
     /**
      * Store a newly created resource i                                                                                                  \n storage.

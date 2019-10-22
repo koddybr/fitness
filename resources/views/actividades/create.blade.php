@@ -7,7 +7,7 @@
                 <div class="card-header">Registrar Actividad Nueva</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('actividades') }}">
+                    <form method="POST" action="{{ asset('actividades') }}">
                         @csrf
 
                         <div class="form-group row">
