@@ -4,10 +4,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Registrar Actividad Nueva</div>
+                <div class="card-header">Editar Actividad</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ asset('actividades') }}">
+                    <form method="POST" action="{{ asset('actividades/'.$actividad->id) }}">
+                        <input name="_method" type="hidden" value="PUT">
                         @csrf
 
                         <div class="form-group row">
@@ -23,7 +24,7 @@
                                 Factor
                             </label>
                             <div class="col-md-6">
-                                <input id="factor" value="{{ $actividad->nombre }}" type="text" class="form-control" name="factor" required>
+                                <input id="factor" value="{{ $actividad->factor }}" type="text" class="form-control" name="factor" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -31,7 +32,7 @@
                                 Descripción
                             </label>
                             <div class="col-md-6">
-                                <input id="descripcion" type="text" class="form-control" name="descripcion">
+                                <input id="descripcion" type="text" class="form-control" value="{{ $actividad->descripcion }}" name="descripcion">
                             </div>
                         </div>
 

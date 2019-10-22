@@ -27,9 +27,9 @@
                                 <td>{{ $actividad->descripcion }}</td>
                                 <td>
                                     <div class="btn-group mr-2" role="group">
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id)}}" class="btn btn-secondary">V</a>
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id.'/edit')}}" class="btn btn-secondary">E</a>
-                                        <a type="button" href="#" class="btn btn-secondary">X</a>
+                                        <a title="Ver" type="button" href="{{asset('actividades/'.$actividad->id)}}" class="btn btn-secondary">V</a>
+                                        <a title="Editar" type="button" href="{{asset('actividades/'.$actividad->id.'/edit')}}" class="btn btn-secondary">E</a>
+                                        <a title="Eliminar" type="button" href="#" class="btn btn-secondary">X</a>
                                     </div>
                                 </td>
                             </tr>
