@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Activdad;
+use App\Actividad;
 class ActividadController extends Controller
 {
     /**
@@ -13,13 +13,12 @@ class ActividadController extends Controller
      */
     public function index()
     {
-        return 234234;
         $actividades = Actividad::get();
         $data = [
             'actividades' => $actividades
         ];
 
-        return $data;
+        return view('actividades.index', $data);
     }
 
     /**
@@ -51,6 +50,7 @@ class ActividadController extends Controller
         $data = [
             'actividad' => $actividad
         ];
+        return redirect('actividades');
         return $actividad;
     }
 
@@ -66,7 +66,7 @@ class ActividadController extends Controller
         $data = [
             'actividad' => $actividad
         ];
-        return view('actividades.create');;
+        return view('actividades.show', $data);
     }
 
     /**
@@ -81,7 +81,7 @@ class ActividadController extends Controller
         $data = [
             'actividad' => $actividad
         ];
-        return $actividad;
+        return view('actividades.edit', $data);
     }
 
     /**
