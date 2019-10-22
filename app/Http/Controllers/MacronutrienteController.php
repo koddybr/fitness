@@ -13,7 +13,12 @@ class MacronutrienteController extends Controller
      */
     public function index()
     {
-        //
+        $macronutrientes = Macronutriente::get();
+        $data = [
+            'macronutrientes' => $macronutrientes
+        ];
+
+        return view('macronutrientes.index', $data);
     }
 
     /**
@@ -23,7 +28,7 @@ class MacronutrienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('macronutriente.create');
     }
 
     /**

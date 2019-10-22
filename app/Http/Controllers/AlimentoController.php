@@ -13,7 +13,12 @@ class AlimentoController extends Controller
      */
     public function index()
     {
-        //
+        $alimentos = Actividad::get();
+        $data = [
+            'alimentos' => $alimentos
+        ];
+
+        return view('alimentos.index', $data);
     }
 
     /**

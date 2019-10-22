@@ -15,7 +15,14 @@ class CreateMacronutrientesTable extends Migration
     {
         Schema::create('macronutrientes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nombre');
+            $table->decimal('peso',13,2)->default(0);
+            $table->decimal('calorias',13,2)->default(0);
+            $table->decimal('proteinas',13,2)->default(0);
+            $table->decimal('carbohidratos',13,2)->default(0);
+            $table->decimal('grasas',13,2)->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

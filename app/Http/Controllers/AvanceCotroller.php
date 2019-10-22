@@ -13,7 +13,12 @@ class AvanceCotroller extends Controller
      */
     public function index()
     {
-        //
+        $avances = Avance::get();
+        $data = [
+            'avances' => $avances
+        ];
+
+        return view('avances.index', $data);
     }
 
     /**
