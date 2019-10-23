@@ -4,18 +4,18 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Registrar Peso Actual</div>
+                <div class="card-header">Registrar Actividad Nueva</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ asset('actividades') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nombres" class="col-md-4 col-form-label text-md-right">
-                                Nombre
+                            <label for="nombre" class="col-md-4 col-form-label text-md-right">
+                                PESOO
                             </label>
                             <div class="col-md-6">
-                                <input id="nombre" value="{{ $actividad->nombre }}" type="text" class="form-control" name="nombre" required>
+                                <input id="nombre" type="text" class="form-control" name="nombre" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -23,7 +23,7 @@
                                 Factor
                             </label>
                             <div class="col-md-6">
-                                <input id="factor" value="{{ $actividad->nombre }}" type="text" class="form-control" name="factor" required>
+                                <input id="factor" type="text" class="form-control" name="factor" required>
                             </div>
                         </div>
                         <div class="form-group row">
