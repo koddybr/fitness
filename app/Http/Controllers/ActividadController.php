@@ -28,10 +28,6 @@ class ActividadController extends Controller
      */
     public function create()
     {
-        // $actividad = new Actividad();
-        // $data = [
-        //     'actividad' => $actividad
-        // ];
         return view('actividades.create');
     }
     /**
@@ -51,7 +47,6 @@ class ActividadController extends Controller
             'actividad' => $actividad
         ];
         return redirect('actividades');
-        return $actividad;
     }
 
     /**
@@ -101,7 +96,7 @@ class ActividadController extends Controller
         $data = [
             'actividad' => $actividad
         ];
-        return $actividad;
+        return redirect('actividades');
     }
 
     /**
