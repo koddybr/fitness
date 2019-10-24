@@ -20,3 +20,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('actividades','ActividadController');
+Route::resource('estados_fisicos','EstadoFisicoController');

@@ -6,16 +6,15 @@
             <div class="card">
                 <div class="card-header">
                     Listado de actividades
-                    <a type="button" href="{{URL::route('actividades.create')}}" class="float-right btn btn-success">Crear actividad</a>
+                    <a type="button" href="{{URL::route('avance.create')}}" class="float-right btn btn-success">Crear actividad</a>
                 </div>
                     <table class="table table-hover table-dark">
                     <thead>
                         <tr>
                         <th scope="col">N°</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Factor</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Peso Inicial</th>
+                        <th scope="col">Peso Actual</th>
+                        <th scope="col">Estado B-M</th>
                         </tr>
                     </thead>
                     <tbody>

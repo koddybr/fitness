@@ -15,7 +15,10 @@ class CreateAvancesTable extends Migration
     {
         Schema::create('avances', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->decimal('peso_inicial',13,2)->default(0);
+            $table->decimal('peso_actual',13,2)->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -16,8 +16,10 @@ class CreateAlimentosTable extends Migration
         Schema::create('alimentos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->string('descripcion');
-            $table->string();
+            $table->string('descripcion')->nullable();
+            $table->string('marca')->nullable();
+            $table->string('etiqueta')->nullable();
+            $table->bigInteger('macronutriente_id');
             $table->timestamps();
         });
     }

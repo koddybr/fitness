@@ -5,17 +5,19 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    Listado de actividades
-                    <a type="button" href="{{URL::route('actividades.create')}}" class="float-right btn btn-success">Crear actividad</a>
+                    Listado de Usuarios
+                    <a type="button" href="{{URL::route('usuario.create')}}" class="float-right btn btn-success">Crear actividad</a>
                 </div>
                     <table class="table table-hover table-dark">
                     <thead>
                         <tr>
                         <th scope="col">N°</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Factor</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Acciones</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">NÚmero de Usuario</th>
+                        <th scope="col">Pasword</th>
                         </tr>
                     </thead>
                     <tbody>

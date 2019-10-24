@@ -81,17 +81,18 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    FITNESS
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Usuario</a>
+                    <a href="https://laracasts.com">Mi Estado Fisico</a>
+                    <a href="https://laravel-news.com">Nivel de Actividad</a>
+                    <a href="https://blog.laravel.com">Alimentos</a>
+                    <a href="https://nova.laravel.com">Macronutrientes</a>
+                    <a href="https://forge.laravel.com">Recomendaciones</a>
+                    <a href="https://github.com/laravel/laravel">Logros y Metas</a>
+                    <a href="https://github.com/laravel/laravel">Avance</a>
                 </div>
             </div>
         </div>

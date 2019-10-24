@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRecomendacionesTable extends Migration
+class CreateLogrosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateRecomendacionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('recomendaciones', function (Blueprint $table) {
+        Schema::create('logros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('alimento_id');
-            $table->decimal('calorias',13,2)->default(0);
+            $table->decimal('peso_objetivo',13,2)->default(0);
+            $table->decimal('peso_actual',13,2)->default(0);
+            $table->boolean('logrado');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -28,6 +30,6 @@ class CreateRecomendacionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recomendaciones');
+        Schema::dropIfExists('logros');
     }
 }

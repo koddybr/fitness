@@ -6,16 +6,18 @@
             <div class="card">
                 <div class="card-header">
                     Listado de actividades
-                    <a type="button" href="{{URL::route('actividades.create')}}" class="float-right btn btn-success">Crear actividad</a>
+                    <a type="button" href="{{URL::route('macronutrientes.create')}}" class="float-right btn btn-success">Crear actividad</a>
                 </div>
                     <table class="table table-hover table-dark">
                     <thead>
                         <tr>
                         <th scope="col">N°</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">peso</th>
+                        <th scope="col">Peso Neto</th>
                         <th scope="col">calorias</th>
-                        <th scope="col">proteinas</th>
+                        <th scope="col">Proteinas</th>
+                        <th scope="col">Carbohidratos</th>
+                        <th scope="col">Grasas</th>
                         </tr>
                     </thead>
                     <tbody>
