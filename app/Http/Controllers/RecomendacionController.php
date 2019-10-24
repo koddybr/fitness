@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Recomendacion;
 
-class UserController extends Controller
+class RecomendacionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuarios = User::get();
+        $recomendaciones = Recomendacion::get();
         $data = [
-            'usuarios' => $usuarios
+            'recomendaciones' => $recomendaciones
         ];
 
-        return view('usuarios.index', $data);
+        return view('recomendaciones.index', $data);
     }
 
     /**

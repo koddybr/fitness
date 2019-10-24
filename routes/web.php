@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('actividades','ActividadController');
 Route::resource('estados_fisicos','EstadoFisicoController');
 Route::resource('alimentos','AlimentoController');
-Route::resource('usuarios','UsuarioController');
+Route::resource('usuarios','UserController');
 Route::resource('macronutrientes','MacronutrienteController');
 Route::resource('recomendaciones','RecomendacionController');
 Route::resource('logros','LogroController');

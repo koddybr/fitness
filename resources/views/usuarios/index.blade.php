@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">
                     Listado de Usuarios
-                    <a type="button" href="{{URL::route('usuario.create')}}" class="float-right btn btn-success">Crear actividad</a>
+                    <a type="button" href="{{URL::route('usuarios.create')}}" class="float-right btn btn-success">Crear Usuario</a>
                 </div>
                     <table class="table table-hover table-dark">
                     <thead>
@@ -21,16 +21,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($actividades as $actividad)
+                        @foreach($usuarios as $usuario)
                             <tr>
-                                <th scope="row">{{ $actividad->id }}</th>
-                                <td>{{ $actividad->nombre }}</td>
-                                <td>{{ $actividad->factor }}</td>
-                                <td>{{ $actividad->descripcion }}</td>
+                                <th scope="row">{{ $usuario->id }}</th>
+                                <td>{{ $usuario->nombre }}</td>
+                                <td>{{ $usuario->factor }}</td>
+                                <td>{{ $usuario->descripcion }}</td>
                                 <td>
                                     <div class="btn-group mr-2" role="group">
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id)}}" class="btn btn-secondary">V</a>
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id.'/edit')}}" class="btn btn-secondary">E</a>
+                                        <a type="button" href="{{asset('usuarios/'.$actividad->id)}}" class="btn btn-secondary">V</a>
+                                        <a type="button" href="{{asset('usuarios/'.$actividad->id.'/edit')}}" class="btn btn-secondary">E</a>
                                         <a type="button" href="#" class="btn btn-secondary">X</a>
                                     </div>
                                 </td>

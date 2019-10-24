@@ -44,6 +44,7 @@ class AlimentoController extends Controller
         $alimento->marca = $request->marca;
         $alimento->descripcion = $request->descripcion;
         $alimento->etiqueta = $request->etiqueta;
+        $alimento->macronutriente_id = 1;
         $alimento->save();
         $data = [
             'alimento' => $alimento
