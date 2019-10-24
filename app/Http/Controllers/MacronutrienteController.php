@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Macronutriente;
 
 class MacronutrienteController extends Controller
 {
@@ -28,7 +29,7 @@ class MacronutrienteController extends Controller
      */
     public function create()
     {
-        return view('macronutriente.create');
+        return view('macronutrientes.create');
     }
 
     /**
@@ -39,7 +40,15 @@ class MacronutrienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $macronutriente = new Macronutriente();
+        $macronutriente->nombre = $request->nombre;
+        $macronutriente->peso = $request->peso;
+        $macronutriente->calorias = $request->calorias;
+        $macronutriente->proteinas = $request->proteinas;
+        $macronutriente->carbohidratos = $request->carbohidratos;
+        $macronutriente->grasas = $request->grasas;
+        $macronutriente->save();
+        return redirect('macronutrientes');
     }
 
     /**
@@ -50,7 +59,11 @@ class MacronutrienteController extends Controller
      */
     public function show($id)
     {
-        //
+        $macronutriente = Macronutriente::find($id);
+        $data = [
+            'macronutriente' => $macronutriente
+        ];
+        return view('macronutrientes.show', $data);
     }
 
     /**
@@ -61,7 +74,11 @@ class MacronutrienteController extends Controller
      */
     public function edit($id)
     {
-        //
+        $macronutriente = Macronutriente::find($id);
+        $data = [
+            'macronutriente' => $macronutriente
+        ];
+        return view('macronutrientes.edit', $data);
     }
 
     /**
@@ -73,7 +90,15 @@ class MacronutrienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $macronutriente = Macronutriente::find($id);
+        $macronutriente->nombre = $request->nombre;
+        $macronutriente->peso = $request->peso;
+        $macronutriente->calorias = $request->calorias;
+        $macronutriente->proteinas = $request->proteinas;
+        $macronutriente->carbohidratos = $request->carbohidratos;
+        $macronutriente->grasas = $request->grasas;
+        $macronutriente->save();
+        return redirect('macronutrientes');
     }
 
     /**

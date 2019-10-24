@@ -4,10 +4,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Registrar Actividad Nueva</div>
+                <div class="card-header">Registrar Calorias</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ asset('actividades') }}">
+                    <form method="POST" action="{{ asset('macronutrientes/'.$macronutriente->id) }}">
+                        <input name="_method" type="hidden" value="PUT">
                         @csrf
 
                         <div class="form-group row">
@@ -15,23 +16,47 @@
                                 Nombre
                             </label>
                             <div class="col-md-6">
-                                <input id="nombre" value="{{ $actividad->nombre }}" type="text" class="form-control" name="nombre" required>
+                                <input value="{{$macronutriente->nombre}}" id="nombre" type="text" class="form-control" name="nombre" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="factor" class="col-md-4 col-form-label text-md-right">
-                                Factor
+                            <label for="peso" class="col-md-4 col-form-label text-md-right">
+                                Peso
                             </label>
                             <div class="col-md-6">
-                                <input id="factor" value="{{ $actividad->nombre }}" type="text" class="form-control" name="factor" required>
+                                <input value="{{$macronutriente->peso}}" id="peso" type="text" class="form-control" name="peso" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="descripcion" class="col-md-4 col-form-label text-md-right">
-                                Descripción
+                            <label for="calorias" class="col-md-4 col-form-label text-md-right">
+                                Calorias
                             </label>
                             <div class="col-md-6">
-                                <input id="descripcion" type="text" class="form-control" name="descripcion">
+                                <input value="{{$macronutriente->calorias}}" id="calorias" type="text" class="form-control" name="calorias" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="proteinas" class="col-md-4 col-form-label text-md-right">
+                                Proteinas
+                            </label>
+                            <div class="col-md-6">
+                                <input value="{{$macronutriente->proteinas}}" id="proteinas" type="text" class="form-control" name="proteinas" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="carbohidratos" class="col-md-4 col-form-label text-md-right">
+                                Carbohidratos
+                            </label>
+                            <div class="col-md-6">
+                                <input value="{{$macronutriente->carbohidratos}}" id="carbohidratos" type="text" class="form-control" name="carbohidratos" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="grasas" class="col-md-4 col-form-label text-md-right">
+                                Grasas
+                            </label>
+                            <div class="col-md-6">
+                                <input value="{{$macronutriente->grasas}}" id="grasas" type="text" class="form-control" name="grasas">
                             </div>
                         </div>
 
