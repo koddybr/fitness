@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Alimento;
 class AlimentoController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class AlimentoController extends Controller
      */
     public function index()
     {
-        $alimentos = Actividad::get();
+        $alimentos = Alimento::get();
         $data = [
             'alimentos' => $alimentos
         ];
@@ -28,7 +28,7 @@ class AlimentoController extends Controller
      */
     public function create()
     {
-        //
+        return view('alimentos.create');
     }
 
     /**
@@ -39,7 +39,16 @@ class AlimentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $alimento = new Alimento();
+        $alimento->nombre = $request->nombre;
+        $alimento->marca = $request->marca;
+        $alimento->descripcion = $request->descripcion;
+        $alimento->etiqueta = $request->etiqueta;
+        $alimento->save();
+        $data = [
+            'alimento' => $alimento
+        ];
+        return redirect('alimentos');
     }
 
     /**
