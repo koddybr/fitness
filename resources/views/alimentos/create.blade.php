@@ -27,6 +27,18 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="macronutriente" class="col-md-4 col-form-label text-md-right">
+                                Macronutriente
+                            </label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="macronutriente_id" name="macronutriente_id">
+                                    @foreach($macronutrientes as $macronutriente)
+                                        <option value="{{ $macronutriente->id }}">{{ $macronutriente->nombre }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="descripcion" class="col-md-4 col-form-label text-md-right">
                                 Descripción
                             </label>

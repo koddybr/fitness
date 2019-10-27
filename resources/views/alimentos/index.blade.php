@@ -16,7 +16,7 @@
                         <th scope="col">Marca</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Macronutrientes</th>
-                        <th scope="col">Etiqueta</th>
+                        <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,8 +24,9 @@
                             <tr>
                                 <th scope="row">{{ $alimento->id }}</th>
                                 <td>{{ $alimento->nombre }}</td>
-                                <td>{{ $alimento->factor }}</td>
+                                <td>{{ $alimento->marca }}</td>
                                 <td>{{ $alimento->descripcion }}</td>
+                                <td>{{ $alimento->macronutriente_id }}</td>
                                 <td>
                                     <div class="btn-group mr-2" role="group">
                                         <a type="button" href="{{asset('alimentos/'.$alimento->id)}}" class="btn btn-secondary">V</a>
