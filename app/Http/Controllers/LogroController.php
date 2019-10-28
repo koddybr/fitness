@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Logro;
 
-class UserController extends Controller
+class LogroController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        $usuarios = User::get();
+        $logros = Logro::get();
         $data = [
-            'usuarios' => $usuarios
+            'logros' => $logros
         ];
 
-        return view('usuarios.index', $data);
+        return view('logros.index', $data);
     }
 
     /**

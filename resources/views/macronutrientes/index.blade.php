@@ -5,8 +5,8 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    Listado de actividades
-                    <a type="button" href="{{URL::route('macronutrientes.create')}}" class="float-right btn btn-success">Crear actividad</a>
+                    Listado de Macronutrientes
+                    <a type="button" href="{{URL::route('macronutrientes.create')}}" class="float-right btn btn-success">Crear macronutriente</a>
                 </div>
                     <table class="table table-hover table-dark">
                     <thead>
@@ -21,16 +21,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($actividades as $actividad)
+                        @foreach($macronutrientes as $macronutriente)
                             <tr>
-                                <th scope="row">{{ $actividad->id }}</th>
-                                <td>{{ $actividad->nombre }}</td>
-                                <td>{{ $actividad->factor }}</td>
-                                <td>{{ $actividad->descripcion }}</td>
+                                <th scope="row">{{ $macronutriente->id }}</th>
+                                <td>{{ $macronutriente->nombre }}</td>
+                                <td>{{ $macronutriente->peso }}</td>
+                                <td>{{ $macronutriente->calorias }}</td>
+                                <td>{{ $macronutriente->proteinas }}</td>
+                                <td>{{ $macronutriente->carbohidratos }}</td>
+                                <td>{{ $macronutriente->grasas }}</td>
                                 <td>
                                     <div class="btn-group mr-2" role="group">
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id)}}" class="btn btn-secondary">V</a>
-                                        <a type="button" href="{{asset('actividades/'.$actividad->id.'/edit')}}" class="btn btn-secondary">E</a>
+                                        <a type="button" href="{{asset('macronutrientes/'.$macronutriente->id)}}" class="btn btn-secondary">V</a>
+                                        <a type="button" href="{{asset('macronutrientes/'.$macronutriente->id.'/edit')}}" class="btn btn-secondary">E</a>
                                         <a type="button" href="#" class="btn btn-secondary">X</a>
                                     </div>
                                 </td>

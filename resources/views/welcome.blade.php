@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>laravel</title>
+        <title>Fitness</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -50,10 +50,10 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
+                padding: 0 30px;
                 font-size: 13px;
                 font-weight: 600;
-                letter-spacing: .1rem;
+                letter-spacing: .3rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -68,12 +68,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Ingresar</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registrar</a>
                         @endif
                     @endauth
                 </div>
@@ -85,14 +85,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Usuario</a>
-                    <a href="https://laracasts.com">Mi Estado Fisico</a>
-                    <a href="https://laravel-news.com">Nivel de Actividad</a>
-                    <a href="https://blog.laravel.com">Alimentos</a>
-                    <a href="https://nova.laravel.com">Macronutrientes</a>
-                    <a href="https://forge.laravel.com">Recomendaciones</a>
-                    <a href="https://github.com/laravel/laravel">Logros y Metas</a>
-                    <a href="https://github.com/laravel/laravel">Avance</a>
+                    <a href="{{ asset('usuarios') }}">Usuario</a>
+                    <a href="{{ asset('estados_fisicos') }}">Mi Estado Fisico</a>
+                    <a href="{{ asset('actividades') }}">Nivel de Actividad</a>
+                    <a href="{{ asset('alimentos') }}">Alimentos</a>
+                    <a href="{{ asset('macronutrientes') }}">Macronutrientes</a>
+                    <a href="{{ asset('recomendaciones') }}">Recomendaciones</a>
+                    <a href="{{ asset('logros') }}">Logros y Metas</a>
+                    <a href="{{ asset('avances') }}">Avance</a>
                 </div>
             </div>
         </div>
