@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Registrar Nueva Alimento</div>
+                <div class="card-header">Registrar Nuevo Alimento</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ asset('alimentos') }}">
@@ -24,6 +24,18 @@
                             </label>
                             <div class="col-md-6">
                                 <input id="marca" type="text" class="form-control" name="marca" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="macronutriente" class="col-md-4 col-form-label text-md-right">
+                                Macronutriente
+                            </label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="macronutriente_id" name="macronutriente_id">
+                                    @foreach($macronutrientes as $macronutriente)
+                                        <option value="{{ $macronutriente->id }}">{{ $macronutriente->nombre }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="form-group row">

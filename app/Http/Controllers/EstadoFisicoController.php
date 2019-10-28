@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\EstadoFisico;
+use App\User;
 
 class EstadoFisicoController extends Controller
 {
@@ -29,7 +30,11 @@ class EstadoFisicoController extends Controller
      */
     public function create()
     {
-        return view('estados_fisicos.create');
+        $usuarios = User::get();
+        $data = [
+            'usuarios' => $usuarios
+        ];
+        return view('estados_fisicos.create', $data);
     }
 
     /**

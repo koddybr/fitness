@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Alimento;
+use App\Macronutriente;
 class AlimentoController extends Controller
 {
     /**
@@ -28,7 +29,12 @@ class AlimentoController extends Controller
      */
     public function create()
     {
-        return view('alimentos.create');
+        $macronutrientes = Macronutriente::get();
+        $data = [
+            'macronutrientes' => $macronutrientes
+        ];
+
+        return view('alimentos.create', $data);
     }
 
     /**
@@ -44,7 +50,7 @@ class AlimentoController extends Controller
         $alimento->marca = $request->marca;
         $alimento->descripcion = $request->descripcion;
         $alimento->etiqueta = $request->etiqueta;
-        $alimento->macronutriente_id = 1;
+        $alimento->macronutriente_id = $request->macronutriente_id;
         $alimento->save();
         $data = [
             'alimento' => $alimento
@@ -60,7 +66,11 @@ class AlimentoController extends Controller
      */
     public function show($id)
     {
-        //
+        $alimento = Alimento::find($id);
+        $data = [
+            'alimento' => $alimento
+        ];
+        return view('alimentos.show', $data);
     }
 
     /**
@@ -71,7 +81,13 @@ class AlimentoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $alimento = Alimento::find($id);
+        $macronutrientes = Macronutriente::get();
+        $data = [
+            'alimento' => $alimento,
+            'macronutrientes' => $macronutrientes
+        ];
+        return view('alimentos.edit', $data);
     }
 
     /**
@@ -83,7 +99,17 @@ class AlimentoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $alimento = Alimento::find($id);
+        $alimento->nombre = $request->nombre;
+        $alimento->marca = $request->marca;
+        $alimento->descripcion = $request->descripcion;
+        $alimento->etiqueta = $request->etiqueta;
+        $alimento->macronutriente_id = $request->macronutriente_id;
+        $alimento->save();
+        $data = [
+            'alimento' => $alimento
+        ];
+        return redirect('alimentos');
     }
 
     /**

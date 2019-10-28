@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Recomendacion;
+use App\Alimento;
 
 class RecomendacionController extends Controller
 {
@@ -29,7 +30,11 @@ class RecomendacionController extends Controller
      */
     public function create()
     {
-        //
+        $alimentos = Alimento::get();
+        $data = [
+            'alimentos' => $alimentos
+        ];
+        return view("recomendaciones.create", $data);
     }
 
     /**
