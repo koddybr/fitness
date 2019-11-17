@@ -59,7 +59,7 @@
                                 Cantidad
                             </label>
                             <div class="col-md-6">
-                                <input id="cantidad" type="file" class="form-control" name="cantidad">
+                                <input id="cantidad" type="text" class="form-control" name="cantidad">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -67,7 +67,7 @@
                                 Calorias
                             </label>
                             <div class="col-md-6">
-                                <input id="calorias" type="file" class="form-control" name="calorias">
+                                <input id="calorias" type="text" class="form-control" name="calorias">
                             </div>
                         </div>
                         <div class="form-group row mb-0">
