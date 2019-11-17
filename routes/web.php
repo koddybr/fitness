@@ -29,3 +29,6 @@ Route::resource('macronutrientes','MacronutrienteController');
 Route::resource('recomendaciones','RecomendacionController');
 Route::resource('logros','LogroController');
 Route::resource('avances','AvanceController');
+
+//Route::post('user','UserController');
+Route::get('get_alimentos','FitlabelAndroidController@getAlimentos');
