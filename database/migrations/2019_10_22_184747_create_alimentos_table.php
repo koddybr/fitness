@@ -20,6 +20,8 @@ class CreateAlimentosTable extends Migration
             $table->string('marca')->nullable();
             $table->string('etiqueta')->nullable();
             $table->bigInteger('macronutriente_id');
+            $table->integer('cantidad')->default(0);
+            $table->integer('calorias')->default(0);
             $table->timestamps();
         });
     }
