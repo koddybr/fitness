@@ -14,8 +14,10 @@
                         <th scope="col">N°</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Marca</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Calorias</th>
                         <th scope="col">Descripción</th>
-                        <th scope="col">Macronutrientes</th>
+                        <th scope="col">Macronutriente</th>
                         <th scope="col">Acciones</th>
                         </tr>
                     </thead>
@@ -25,6 +27,8 @@
                                 <th scope="row">{{ $alimento->id }}</th>
                                 <td>{{ $alimento->nombre }}</td>
                                 <td>{{ $alimento->marca }}</td>
+                                <td>{{ $alimento->cantidad }}</td>
+                                <td>{{ $alimento->calorias }}</td>
                                 <td>{{ $alimento->descripcion }}</td>
                                 <td>{{ $alimento->macronutriente_id }}</td>
                                 <td>

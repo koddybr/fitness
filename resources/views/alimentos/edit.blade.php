@@ -59,6 +59,22 @@
                                 <input id="etiqueta"  value="{{ $alimento->etiqueta }}" type="file" class="form-control" name="etiqueta">
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="cantidad" class="col-md-4 col-form-label text-md-right">
+                                Cantidad
+                            </label>
+                            <div class="col-md-6">
+                                <input id="cantidad" value="{{ $alimento->cantidad }}" type="file" class="form-control" name="cantidad">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="calorias" class="col-md-4 col-form-label text-md-right">
+                                Calorias
+                            </label>
+                            <div class="col-md-6">
+                                <input id="calorias" value="{{ $alimento->calorias }}" type="file" class="form-control" name="calorias">
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
