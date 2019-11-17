@@ -10,7 +10,14 @@
                     <form method="POST" action="{{ asset('alimentos/'.$alimento->id) }}">
                         <input name="_method" type="hidden" value="PUT">
                         @csrf
-
+                        <div class="form-group row">
+                            <label for="codigo" class="col-md-4 col-form-label text-md-right">
+                                Codigo
+                            </label>
+                            <div class="col-md-6">
+                                <input id="codigo" value="{{ $alimento->codigo }}" type="text" class="form-control" name="cantidad">
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="nombre" class="col-md-4 col-form-label text-md-right">
                                 Nombre

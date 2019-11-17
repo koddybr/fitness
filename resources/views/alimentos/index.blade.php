@@ -11,7 +11,7 @@
                     <table class="table table-hover table-dark">
                     <thead>
                         <tr>
-                        <th scope="col">N°</th>
+                        <th scope="col">Codigo</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Marca</th>
                         <th scope="col">Cantidad</th>
@@ -24,7 +24,7 @@
                     <tbody>
                         @foreach($alimentos as $alimento)
                             <tr>
-                                <th scope="row">{{ $alimento->id }}</th>
+                                <th scope="row">{{ $alimento->codigo }}</th>
                                 <td>{{ $alimento->nombre }}</td>
                                 <td>{{ $alimento->marca }}</td>
                                 <td>{{ $alimento->cantidad }}</td>
